@@ -11,9 +11,6 @@
     $margin = 40;
     $fontsize = 20;
     
-    $dst_x = 400;
-    $dst_y = 80;
-
     $image = imagecreatetruecolor($width * $factor, $height * $factor);
     $center_line = ($height * $factor)/2;
 
@@ -33,8 +30,6 @@
     imagettftext ($image, $fontsize * $factor, 0, 20 , ($margin + $fontsize) * $factor + 12 * $factor , $darkgrey ,$font , $text1);
     imagettftext ($image, $fontsize * $factor, 0, 20 , $center_line + $fontsize * $factor + 12 * $factor , $black ,$font , $text2);
     
-    $image2 = imagecreatetruecolor($width, $height);
-    imagecopyresized($image2, $image, 0, 0, 0, 0, $width, $height, $width * $factor, $height * $factor);
-    
+    // write it to file
     imagejpeg($image, "otsikko.jpg");
   }
