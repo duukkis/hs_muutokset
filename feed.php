@@ -94,6 +94,6 @@ foreach($urls AS $k => $u){
 }
 
 // write last 1000 headlines into local storage for comparison
-arsort($existing);
+krsort($existing);
 $existing = array_slice($existing, 0, 1000, TRUE);
 file_put_contents($local_storage, serialize($existing));
