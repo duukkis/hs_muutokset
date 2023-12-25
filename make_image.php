@@ -3,6 +3,8 @@
   function writeToFile($text1, $text2){
     $text1 = wordwrap($text1, 48)."";
     $text2 = wordwrap($text2, 48)."";
+    $text1 = preg_replace( '/[\x{202F}]/u', ' ', $text1);
+    $text2 = preg_replace( '/[\x{202F}]/u', ' ', $text2);
     // create image
     $factor = 1;
     $width = 996;
