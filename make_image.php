@@ -7,10 +7,10 @@
     $text2 = preg_replace( '/[\x{202F}]/u', ' ', $text2);
     // create image
     $factor = 1;
-    $width = 996;
-    $height = 560;
+    $width = 1200;
+    $height = 675;
     $margin = 40;
-    $fontsize = 28;
+    $fontsize = 34;
 
     $image = imagecreatetruecolor($width * $factor, $height * $factor);
     $center_line = ($height * $factor)/2;
